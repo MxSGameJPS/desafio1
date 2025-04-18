@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AVANTI - Loja Online</title>
+    <link rel="stylesheet" href="Styles/header.css" />
+    <link rel="stylesheet" href="Styles/menu.css" />
+    <link rel="stylesheet" href="Styles/hero.css" />
+    <link rel="stylesheet" href="Styles/produtos.css" />
+    <link rel="stylesheet" href="Styles/banner.css" />
+    <link rel="stylesheet" href="Styles/banner3.css" />
+    <link rel="stylesheet" href="Styles/banner4.css" />
+    <link rel="stylesheet" href="Styles/newsletter.css" />
+    <link rel="stylesheet" href="Styles/footer.css" />
+    <link rel="stylesheet" href="Styles/footter2.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Faixa Promocional -->
+    <div class="promo-bar">
+      <div class="container">
+        <p>
+          Ganhe <span class="highlight-red">R$10,00</span> de desconto no seu
+          primeiro pedido. Utilize o cupom
+          <span class="highlight-blue">DESCONTO10</span>
+        </p>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+      <div class="container_imagem">
+        <img src="Images/logo.svg" alt="Logo Avanti" />
+
+        <div class="search-container">
+          <input
+            id="search-input"
+            type="search"
+            placeholder="Digite o que procura"
+          />
+          <i id="search-button" class="fas fa-search search-icon"></i>
+        </div>
+
+        <div class="user-actions">
+          <div class="user-profile">
+            <i class="fas fa-user"></i>
+            <span>Olá, cliente</span>
+          </div>
+
+          <div class="shopping-cart">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count">0</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Menu de navegação -->
+    <nav class="main-menu">
+      <div class="container">
+        <ul class="menu-horizontal">
+          <li class="menu-item category-item" data-submenu="todas-categorias">
+            <a href="#"><i class="fas fa-list"></i> Todas as Categorias</a>
+          </li>
+          <li class="menu-item" data-submenu="departamento-1">
+            <a href="#">Departamentos</a>
+          </li>
+          <li class="menu-item" data-submenu="departamento-2">
+            <a href="#">Departamentos</a>
+          </li>
+          <li class="menu-item" data-submenu="departamento-3">
+            <a href="#">Departamentos</a>
+          </li>
+          <li class="menu-item" data-submenu="departamento-4">
+            <a href="#">Departamentos</a>
+          </li>
+          <li class="menu-item" data-submenu="departamento-5">
+            <a href="#">Departamentos</a>
+          </li>
+          <li class="menu-item" data-submenu="departamento-6">
+            <a href="#">Departamentos</a>
+          </li>
+          <li class="menu-item" data-submenu="departamento-7">
+            <a href="#">Departamentos</a>
+          </li>
+          <li class="menu-item" data-submenu="departamento-8">
+            <a href="#">Departamentos</a>
+          </li>
+          <li class="menu-item" data-submenu="departamento-9">
+            <a href="#">Departamentos</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Submenu para Todas as Categorias -->
+      <div
+        class="submenu-container"
+        id="submenu-container"
+        data-for="todas-categorias"
+      >
+        <div class="container">
+          <div class="submenu-wrapper">
+            <!-- Primeira coluna de submenus -->
+            <div class="submenu-column">
+              <h3>Todas as Categorias</h3>
+              <ul class="submenu-list">
+                <li><a href="#">Departamentos</a></li>
+                <li><a href="#">Departamentos</a></li>
+                <li><a href="#">Departamentos</a></li>
+                <li><a href="#">Departamentos</a></li>
+                <li><a href="#">Departamentos</a></li>
+                <li><a href="#">Departamentos</a></li>
+                <li><a href="#">Departamentos</a></li>
+                <li><a href="#">Departamentos</a></li>
+              </ul>
+            </div>
+
+            <!-- Segunda coluna de submenus -->
+            <div class="submenu-column">
+              <h3>Categorias</h3>
+              <ul class="submenu-list">
+                <li><a href="#">Categoria</a></li>
+                <li><a href="#">Categoria</a></li>
+                <li><a href="#">Categoria</a></li>
+                <li><a href="#">Categoria</a></li>
+                <li><a href="#">Categoria</a></li>
+                <li><a href="#">Categoria</a></li>
+                <li><a href="#">Categoria</a></li>
+                <li><a href="#">Categoria</a></li>
+              </ul>
+            </div>
+
+            <!-- Terceira coluna de submenus -->
+            <div class="submenu-column">
+              <h3>Categorias</h3>
+              <ul class="submenu-list">
+                <li><a href="#">Categoria</a></li>
+                <li><a href="#">Categoria</a></li>
+                <li><a href="#">Categoria</a></li>
+                <li><a href="#">Categoria</a></li>
+                <li><a href="#">Categoria</a></li>
+                <li><a href="#">Categoria</a></li>
+                <li><a href="#">Categoria</a></li>
+                <li><a href="#">Categoria</a></li>
+              </ul>
+            </div>
+
+            <!-- Quarta coluna de submenus -->
+            <div class="submenu-column">
+              <h3>Categorias</h3>
+              <ul class="submenu-list">
+                <li><a href="#">Categoria</a></li>
+                <li><a href="#">Categoria</a></li>
+                <li><a href="#">Categoria</a></li>
+                <li><a href="#">Categoria</a></li>
+                <li><a href="#">Categoria</a></li>
+                <li><a href="#">Categoria</a></li>
+                <li><a href="#">Categoria</a></li>
+                <li><a href="#">Categoria</a></li>
+              </ul>
+            </div>
+
+            <!-- Quinta coluna de submenus -->
+            <div class="submenu-column">
+              <h3>Categorias</h3>
+              <ul class="submenu-list">
+                <li><a href="#">Categoria</a></li>
+                <li><a href="#">Categoria</a></li>
+                <li><a href="#">Categoria</a></li>
+                <li><a href="#">Categoria</a></li>
+                <li><a href="#">Categoria</a></li>
+                <li><a href="#">Categoria</a></li>
+                <li><a href="#">Categoria</a></li>
+                <li><a href="#">Categoria</a></li>
+              </ul>
+            </div>
+
+            <!-- Banner de promoção no menu -->
+            <div class="submenu-banner">
+              <img src="Images/imagemmenu.png" alt="Promoção especial" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container_banner">
+      <img src="Images/SuperSale.png" alt="Banner" />
+      <div class="container_banner_text">
+        <h2></h2>
+        <p>ITENS SELECIONADOS COM ATÉ</p>
+        <h3>50%OFF</h3>
+      </div>
+    </div>
+
+    <div class="container_produtos">
+      <div class="container_produtos_text">
+        <div class="header_produtos">
+          <h4>Lançamentos</h4>
+          <a href="#" class="ver-mais">Ver mais</a>
+        </div>
+
+        <!-- Estrutura Swiper -->
+        <div class="swiper product-swiper">
+          <ul class="swiper-wrapper" id="lista-produtos">
+            <!-- Seus LIs originais aqui dentro como swiper-slide -->
+            <li class="swiper-slide">
+              <span>Novo</span>
+              <img src="Images/Homemdecamisabranca.png" alt="Produto 1" />
+              <p class="descricao">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              </p>
+              <p><s>R$ 100,00</s></p>
+              <p class="preco"><strong>R$ 50,00</strong></p>
+              <p class="desconto">10% OFF</p>
+              <p>ou em até <b>10x de R$ 7,90</b></p>
+              <button class="botao_produtos"><a href="#">Comprar</a></button>
+            </li>
+
+            <li class="swiper-slide">
+              <span>Novo</span>
+              <img src="Images/Homemdecamisabranca.png" alt="Produto 1" />
+              <p class="descricao">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              </p>
+              <p><s>R$ 100,00</s></p>
+              <p class="preco"><strong>R$ 50,00</strong></p>
+              <p class="desconto">10% OFF</p>
+              <p>ou em até <b>10x de R$ 7,90</b></p>
+              <button class="botao_produtos"><a href="#">Comprar</a></button>
+            </li>
+
+            <li class="swiper-slide">
+              <span>Novo</span>
+              <img src="Images/Homemdecamisabranca.png" alt="Produto 1" />
+              <p class="descricao">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              </p>
+              <p><s>R$ 100,00</s></p>
+              <p class="preco"><strong>R$ 50,00</strong></p>
+              <p class="desconto">10% OFF</p>
+              <p>ou em até <b>10x de R$ 7,90</b></p>
+              <button class="botao_produtos"><a href="#">Comprar</a></button>
+            </li>
+
+            <li class="swiper-slide">
+              <span>Novo</span>
+              <img src="Images/Homemdecamisabranca.png" alt="Produto 1" />
+              <p class="descricao">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              </p>
+              <p><s>R$ 100,00</s></p>
+              <p class="preco"><strong>R$ 50,00</strong></p>
+              <p class="desconto">10% OFF</p>
+              <p>ou em até <b>10x de R$ 7,90</b></p>
+              <button class="botao_produtos"><a href="#">Comprar</a></button>
+            </li>
+
+            <li class="swiper-slide">
+              <span>Novo</span>
+              <img src="Images/Homemdecamisabranca.png" alt="Produto 1" />
+              <p class="descricao">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              </p>
+              <p><s>R$ 100,00</s></p>
+              <p class="preco"><strong>R$ 50,00</strong></p>
+              <p class="desconto">10% OFF</p>
+              <p>ou em até <b>10x de R$ 7,90</b></p>
+              <button class="botao_produtos"><a href="#">Comprar</a></button>
+            </li>
+
+            <!-- Duplicatas para o loop -->
+            <li class="swiper-slide">
+              <span>Novo</span>
+              <img
+                src="Images/Homemdecamisabranca.png"
+                alt="Produto 1 Duplicado"
+              />
+              <p class="descricao">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              </p>
+              <p><s>R$ 100,00</s></p>
+              <p class="preco"><strong>R$ 50,00</strong></p>
+              <p class="desconto">10% OFF</p>
+              <p>ou em até <b>10x de R$ 7,90</b></p>
+              <button class="botao_produtos"><a href="#">Comprar</a></button>
+            </li>
+            <li class="swiper-slide">
+              <span>Novo</span>
+              <img
+                src="Images/Homemdecamisabranca.png"
+                alt="Produto 1 Duplicado"
+              />
+              <p class="descricao">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              </p>
+              <p><s>R$ 100,00</s></p>
+              <p class="preco"><strong>R$ 50,00</strong></p>
+              <p class="desconto">10% OFF</p>
+              <p>ou em até <b>10x de R$ 7,90</b></p>
+              <button class="botao_produtos"><a href="#">Comprar</a></button>
+            </li>
+            <li class="swiper-slide">
+              <span>Novo</span>
+              <img
+                src="Images/Homemdecamisabranca.png"
+                alt="Produto 1 Duplicado"
+              />
+              <p class="descricao">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              </p>
+              <p><s>R$ 100,00</s></p>
+              <p class="preco"><strong>R$ 50,00</strong></p>
+              <p class="desconto">10% OFF</p>
+              <p>ou em até <b>10x de R$ 7,90</b></p>
+              <button class="botao_produtos"><a href="#">Comprar</a></button>
+            </li>
+            <li class="swiper-slide">
+              <span>Novo</span>
+              <img
+                src="Images/Homemdecamisabranca.png"
+                alt="Produto 1 Duplicado"
+              />
+              <p class="descricao">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              </p>
+              <p><s>R$ 100,00</s></p>
+              <p class="preco"><strong>R$ 50,00</strong></p>
+              <p class="desconto">10% OFF</p>
+              <p>ou em até <b>10x de R$ 7,90</b></p>
+              <button class="botao_produtos"><a href="#">Comprar</a></button>
+            </li>
+            <li class="swiper-slide">
+              <span>Novo</span>
+              <img
+                src="Images/Homemdecamisabranca.png"
+                alt="Produto 1 Duplicado"
+              />
+              <p class="descricao">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              </p>
+              <p><s>R$ 100,00</s></p>
+              <p class="preco"><strong>R$ 50,00</strong></p>
+              <p class="desconto">10% OFF</p>
+              <p>ou em até <b>10x de R$ 7,90</b></p>
+              <button class="botao_produtos"><a href="#">Comprar</a></button>
+            </li>
+            <!-- Fim Duplicatas -->
+          </ul>
+
+          <!-- Indicadores Swiper (substitui a div .indicadores) -->
+          <div class="swiper-pagination"></div>
+
+          <!-- Setas de navegação Swiper (substitui os buttons .seta_esquerda/direita) -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container_banner_2">
+      <div class="container_banner_2_imagem">
+        <img src="Images/CanecaPretaSemFundo.png" alt="Banner 2" />
+      </div>
+      <div class="container_banner_2_text">
+        <h2>Lorem, ipsum dolor.</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic
+          inventore facilis officiis autem itaque cumque recusandae? Sed libero
+          delectus laudantium architecto expedita assumenda dolore amet ut
+          molestias suscipit. Doloribus, molestiae!
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic
+          inventore facilis officiis autem itaque cumque recusandae? Sed libero
+          delectus laudantium architecto expedita assumenda dolore amet ut
+          molestias suscipit. Doloribus, molestiae!
+        </p>
+      </div>
+    </div>
+
+    <div class="container_banner_3">
+      <div class="container_banner_3_text">
+        <h2>Lorem, ipsum dolor.</h2>
+        <div class="container_banner_3_text_2">
+          <i class="fa-solid fa-location-dot"></i>
+          <p>
+            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
+            montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
+            pellentesque eu, pretium quis, sem.
+          </p>
+        </div>
+
+        <div class="container_banner_3_text_2">
+          <i class="fa-solid fa-location-dot"></i>
+          <p>
+            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
+            montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
+            pellentesque eu, pretium quis, sem.
+          </p>
+        </div>
+
+        <div class="container_banner_3_text_2">
+          <i class="fa-solid fa-location-dot"></i>
+          <p>
+            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
+            montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
+            pellentesque eu, pretium quis, sem.
+          </p>
+        </div>
+      </div>
+      <div class="container_banner_3_imagem">
+        <img src="Images/Canecaemimadataboa.png" alt="Banner 3" />
+      </div>
+    </div>
+
+    <div class="container_banner_2">
+      <div class="container_banner_2_imagem">
+        <img src="Images/CanecaPretaSemFundo.png" alt="Banner 2" />
+      </div>
+      <div class="container_banner_2_text">
+        <h2>Lorem, ipsum dolor.</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic
+          inventore facilis officiis autem itaque cumque recusandae? Sed libero
+          delectus laudantium architecto expedita assumenda dolore amet ut
+          molestias suscipit. Doloribus, molestiae!
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic
+          inventore facilis officiis autem itaque cumque recusandae? Sed libero
+          delectus laudantium architecto expedita assumenda dolore amet ut
+          molestias suscipit. Doloribus, molestiae!
+        </p>
+      </div>
+    </div>
+
+    <div class="container_produtos">
+      <div class="container_produtos_text">
+        <div class="header_produtos">
+          <h4>Lançamentos</h4>
+          <a href="#" class="ver-mais">Ver mais</a>
+        </div>
+
+        <!-- Estrutura Swiper -->
+        <div class="swiper product-swiper">
+          <ul class="swiper-wrapper" id="lista-produtos">
+            <!-- Seus LIs originais aqui dentro como swiper-slide -->
+            <li class="swiper-slide">
+              <span>Novo</span>
+              <img src="Images/Homemdecamisabranca.png" alt="Produto 1" />
+              <p class="descricao">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              </p>
+              <p><s>R$ 100,00</s></p>
+              <p class="preco"><strong>R$ 50,00</strong></p>
+              <p class="desconto">10% OFF</p>
+              <p>ou em até <b>10x de R$ 7,90</b></p>
+              <button class="botao_produtos"><a href="#">Comprar</a></button>
+            </li>
+
+            <li class="swiper-slide">
+              <span>Novo</span>
+              <img src="Images/Homemdecamisabranca.png" alt="Produto 1" />
+              <p class="descricao">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              </p>
+              <p><s>R$ 100,00</s></p>
+              <p class="preco"><strong>R$ 50,00</strong></p>
+              <p class="desconto">10% OFF</p>
+              <p>ou em até <b>10x de R$ 7,90</b></p>
+              <button class="botao_produtos"><a href="#">Comprar</a></button>
+            </li>
+
+            <li class="swiper-slide">
+              <span>Novo</span>
+              <img src="Images/Homemdecamisabranca.png" alt="Produto 1" />
+              <p class="descricao">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              </p>
+              <p><s>R$ 100,00</s></p>
+              <p class="preco"><strong>R$ 50,00</strong></p>
+              <p class="desconto">10% OFF</p>
+              <p>ou em até <b>10x de R$ 7,90</b></p>
+              <button class="botao_produtos"><a href="#">Comprar</a></button>
+            </li>
+
+            <li class="swiper-slide">
+              <span>Novo</span>
+              <img src="Images/Homemdecamisabranca.png" alt="Produto 1" />
+              <p class="descricao">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              </p>
+              <p><s>R$ 100,00</s></p>
+              <p class="preco"><strong>R$ 50,00</strong></p>
+              <p class="desconto">10% OFF</p>
+              <p>ou em até <b>10x de R$ 7,90</b></p>
+              <button class="botao_produtos"><a href="#">Comprar</a></button>
+            </li>
+
+            <li class="swiper-slide">
+              <span>Novo</span>
+              <img src="Images/Homemdecamisabranca.png" alt="Produto 1" />
+              <p class="descricao">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              </p>
+              <p><s>R$ 100,00</s></p>
+              <p class="preco"><strong>R$ 50,00</strong></p>
+              <p class="desconto">10% OFF</p>
+              <p>ou em até <b>10x de R$ 7,90</b></p>
+              <button class="botao_produtos"><a href="#">Comprar</a></button>
+            </li>
+
+            <!-- Duplicatas para o loop -->
+            <li class="swiper-slide">
+              <span>Novo</span>
+              <img
+                src="Images/Homemdecamisabranca.png"
+                alt="Produto 1 Duplicado"
+              />
+              <p class="descricao">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              </p>
+              <p><s>R$ 100,00</s></p>
+              <p class="preco"><strong>R$ 50,00</strong></p>
+              <p class="desconto">10% OFF</p>
+              <p>ou em até <b>10x de R$ 7,90</b></p>
+              <button class="botao_produtos"><a href="#">Comprar</a></button>
+            </li>
+            <li class="swiper-slide">
+              <span>Novo</span>
+              <img
+                src="Images/Homemdecamisabranca.png"
+                alt="Produto 1 Duplicado"
+              />
+              <p class="descricao">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              </p>
+              <p><s>R$ 100,00</s></p>
+              <p class="preco"><strong>R$ 50,00</strong></p>
+              <p class="desconto">10% OFF</p>
+              <p>ou em até <b>10x de R$ 7,90</b></p>
+              <button class="botao_produtos"><a href="#">Comprar</a></button>
+            </li>
+            <li class="swiper-slide">
+              <span>Novo</span>
+              <img
+                src="Images/Homemdecamisabranca.png"
+                alt="Produto 1 Duplicado"
+              />
+              <p class="descricao">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              </p>
+              <p><s>R$ 100,00</s></p>
+              <p class="preco"><strong>R$ 50,00</strong></p>
+              <p class="desconto">10% OFF</p>
+              <p>ou em até <b>10x de R$ 7,90</b></p>
+              <button class="botao_produtos"><a href="#">Comprar</a></button>
+            </li>
+            <li class="swiper-slide">
+              <span>Novo</span>
+              <img
+                src="Images/Homemdecamisabranca.png"
+                alt="Produto 1 Duplicado"
+              />
+              <p class="descricao">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              </p>
+              <p><s>R$ 100,00</s></p>
+              <p class="preco"><strong>R$ 50,00</strong></p>
+              <p class="desconto">10% OFF</p>
+              <p>ou em até <b>10x de R$ 7,90</b></p>
+              <button class="botao_produtos"><a href="#">Comprar</a></button>
+            </li>
+            <li class="swiper-slide">
+              <span>Novo</span>
+              <img
+                src="Images/Homemdecamisabranca.png"
+                alt="Produto 1 Duplicado"
+              />
+              <p class="descricao">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              </p>
+              <p><s>R$ 100,00</s></p>
+              <p class="preco"><strong>R$ 50,00</strong></p>
+              <p class="desconto">10% OFF</p>
+              <p>ou em até <b>10x de R$ 7,90</b></p>
+              <button class="botao_produtos"><a href="#">Comprar</a></button>
+            </li>
+            <!-- Fim Duplicatas -->
+          </ul>
+
+          <!-- Indicadores Swiper (substitui a div .indicadores) -->
+          <div class="swiper-pagination"></div>
+
+          <!-- Setas de navegação Swiper (substitui os buttons .seta_esquerda/direita) -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container_banner_4">
+      <img src="Images/Bannercomfaixaazul.png" alt="Banner 4" />
+      <div class="container_banner_4_text">
+        <p>
+          Entre em contato conosco e verifique a disponibilidade para sua
+          região!
+        </p>
+      </div>
+    </div>
+
+    <div class="newsletter">
+      <div class="newsletter_text">
+        <h2>Cadastre-se na nossa <span>newsletter</span></h2>
+      </div>
+      <div class="newsletter_form">
+        <input type="text" placeholder="Digite seu nome" />
+        <input type="email" placeholder="Digite seu e-mail" />
+        <input
+          class="checkbox"
+          type="checkbox"
+          id="termos"
+          title="Aceitar termos e condições"
+        />
+        <label for="termos"
+          >Estou de acordo com a <a href="#">Política de Privacidade</a></label
+        >
+        <button class="botao_newsletter">Cadastrar</button>
+      </div>
+    </div>
+
+    <div class="container_footer">
+      <div class="container_footer_image">
+        <div class="footer_image">
+          <img src="Images/logo.svg" alt="Logo Avanti" />
+          <div class="redes_sociais">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer_text">
+          <ul>
+            <li><b>Institucional</b></li>
+            <li><a href="#">Sobre nós</a></li>
+            <li><a href="#">Nossas lojas</a></li>
+            <li><a href="#">Privacidade e Segurança</a></li>
+            <li><a href="#">Termos e Condições</a></li>
+          </ul>
+
+          <ul>
+            <li><b>Central de Ajuda</b></li>
+            <li><a href="#">Fale Conosco</a></li>
+            <li><a href="#">Frete e Entrega</a></li>
+            <li><a href="#">Trocas e Devolucoes</a></li>
+            <li><a href="#">Formas de Pagamento</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+
+          <ul>
+            <li><b>Atendimento</b></li>
+            <li><b>Telefone:</b> (11) 99999-9999</li>
+            <li><b>Email:</b> contato@avanti.com.br</li>
+            <li><b>WhatsApp:</b> (11) 99999-9999</li>
+            <li><b>Horário de Atendimento:</b></li>
+            <li>Segunda a Sábado: 07:00 às 23:00</li>
+            <li>Domingo e Feriados: 07:00 às 21:00</li>
+          </ul>
+        </div>
+      </div>
+      <div class="pagamentos">
+        <img src="Images/Cartoes.png" alt="Pagamentos" />
+      </div>
+    </div>
+
+    <div class="container_footer_copy">
+      <p>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+        nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+        volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+        ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+        Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
+        molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero
+        eros et accumsan et iusto odio dignissim qui blandit praesent luptatum
+        zzril delenit augue duis dolore te feugait nulla facilisi.
+      </p>
+      <div class="cartoes">
+        <img src="Images/cartoes2.png" alt="Pagamentos" />
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </body>
+</html>

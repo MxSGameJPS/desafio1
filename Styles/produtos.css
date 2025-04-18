@@ -1,0 +1,229 @@
+.container_produtos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  position: relative;
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container_produtos_text {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 1220px;
+  padding: 0;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container_produtos_text a {
+  text-decoration: none;
+  color: #303030;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.header_produtos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1220px;
+}
+
+/* Remover ou comentar estilos antigos das setas e indicadores */
+/*
+.seta_esquerda {
+  position: absolute;
+  top: 50%;
+  left: 16%;
+  border: 1px solid #005cff;
+  border-radius: 999px;
+  color: #005cff;
+  padding: 20px;
+  gap: 10px;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.seta_direita {
+  position: absolute;
+  top: 50%;
+  right:16%;
+  border: 1px solid #005cff;
+  border-radius: 999px;
+  color: #005cff;
+  padding: 20px;
+  gap: 10px;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.indicadores {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #dddddd;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #005cff;
+}
+*/
+
+/* Remover estilos conflitantes do UL antigo */
+.container_produtos_text ul.swiper-wrapper {
+  max-width: none;
+  gap: 17px;
+  padding: 0px;
+  overflow: visible;
+  list-style: none;
+  padding-bottom: 40px;
+  box-sizing: border-box;
+}
+
+.container_produtos_text ul li.swiper-slide {
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #fff;
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+}
+
+.container_produtos_text ul li img {
+  width: 100%;
+  max-width: 222px;
+  margin-bottom: 16px;
+}
+
+.container_produtos_text ul li p {
+  font-size: 12px;
+  font-weight: normal;
+  margin: 0px;
+  margin-bottom: 4px;
+}
+
+.container_produtos_text ul li p.descricao {
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.container_produtos_text ul li p.preco {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.container_produtos_text ul li p.desconto {
+  font-size: 11px;
+  text-transform: uppercase;
+  line-height: 12px;
+  font-weight: 700;
+  position: absolute;
+  top: 70%;
+  right: 30%;
+  background-color: #5ec0be;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.container_produtos_text ul li span {
+  position: absolute;
+  top: 1%;
+  left: 2%;
+  font-size: 10px;
+  font-weight: normal;
+  text-transform: uppercase;
+  width: 41px;
+  background-color: #00264e;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.container_produtos_text ul li button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: normal;
+  text-transform: uppercase;
+  width: 100%;
+  background-color: #005cff;
+  color: #fff;
+  padding: 10px 24px;
+  gap: 10px;
+  border-radius: 8px;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 16px;
+}
+
+.container_produtos_text ul li button a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Estilos para os elementos Swiper */
+.product-swiper {
+  position: relative;
+  padding: 0 50px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.product-swiper .swiper-button-prev,
+.product-swiper .swiper-button-next {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.product-swiper .swiper-button-prev {
+  left: 10px;
+}
+
+.product-swiper .swiper-button-next {
+  right: 10px;
+}
+
+.product-swiper .swiper-pagination {
+  bottom: 10px;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.product-swiper .swiper-pagination-bullet {
+  background-color: #ccc;
+  opacity: 1;
+  width: 8px;
+  height: 8px;
+}
+
+.product-swiper .swiper-pagination-bullet-active {
+  background-color: #005cff;
+}

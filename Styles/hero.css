@@ -1,0 +1,60 @@
+.container_banner {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+  border: 1px solid #e0e0e0;
+  background-color: #E7E7EA;
+}
+
+.container_banner img {
+  position: absolute;
+  left: 10%;
+  top: 0;
+  width: 685px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.container_banner_text {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+.container_banner_text h2 {
+  font-size: 80px;
+  margin: 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: Arial, sans-serif;
+}
+
+.container_banner_text h2::before {
+  content: "SUPER";
+  font-weight: 900;
+}
+
+.container_banner_text h2::after {
+  content: "SALE";
+  font-weight: 400;
+}
+
+.container_banner_text p {
+  color: #005CFF;
+  font-size: 20px;
+  margin: 8px 0;
+  text-transform: uppercase;
+  letter-spacing: 7.5px;
+  font-family: Arial, sans-serif;
+}
+
+.container_banner_text h3 {
+  color: #005CFF;
+  font-size: 52px;
+  font-weight: 700;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  text-transform: uppercase;
+}
