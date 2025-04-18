@@ -38,8 +38,6 @@
   max-width: 1220px;
 }
 
-
-
 /* Remover estilos conflitantes do UL antigo */
 .container_produtos_text ul.swiper-wrapper {
   max-width: none;
@@ -179,3 +177,135 @@
 .product-swiper .swiper-pagination-bullet-active {
   background-color: #005cff;
 }
+
+
+@media (max-width: 600px) {
+  .product-swiper {
+    padding: 0; 
+  }
+
+  .container_produtos_text ul {
+    display: flex;
+    gap: 1px;
+    width: 175px;
+  }
+
+  .container_produtos_text ul li {
+    width: 175px;
+    height: 360px;
+  }
+
+  /* Ajusta largura e padding do slide/card */
+  .container_produtos_text ul li.swiper-slide {
+    width: 100%;
+    max-width: 178px;
+    padding: 8px;
+  }
+
+  /* Ajusta imagem dentro do card */
+  .container_produtos_text ul li img {
+    max-width: 158px; 
+    width: 100%; 
+    margin-bottom: 8px; 
+  }
+
+  
+  .container_produtos_text ul li p:has(s) {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px; 
+    margin-bottom: 2px; 
+  }
+
+  /* Estiliza o preço original riscado */
+  .container_produtos_text ul li p s {
+    font-size: 11px; /* Tamanho da fonte do preço riscado */
+    color: #888; /* Cor do preço riscado */
+  }
+
+  /* Estiliza o selo de desconto */
+  .container_produtos_text ul li p.desconto {
+    position: static; /* Essencial: remove pos. absoluta */
+    display: inline-block;
+    background-color: #5ec0be; /* Cor de fundo do Figma */
+    color: #fff;
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1.2; /* Ajuste de altura da linha */
+    text-transform: uppercase;
+    margin: 0; /* Limpa margens */
+    /* Limpa propriedades de posicionamento absoluto */
+    top: auto;
+    right: auto;
+    bottom: auto;
+  }
+
+  /* Ajusta o texto da descrição */
+  .container_produtos_text ul li p.descricao {
+    font-size: 11px;
+    margin-bottom: 5px;
+    line-height: 1.3;
+    /* Limitar número de linhas se necessário */
+    /* display: -webkit-box; */
+    /* -webkit-line-clamp: 2; */
+    /* -webkit-box-orient: vertical; */
+    /* overflow: hidden; */
+  }
+
+  /* Ajusta preço final */
+  .container_produtos_text ul li p.preco {
+    font-size: 15px; /* Tamanho do preço final */
+    font-weight: bold;
+    margin-bottom: 2px;
+  }
+  .container_produtos_text ul li p.preco strong {
+    font-weight: bold; /* Garantir negrito */
+  }
+
+  /* Ajusta texto de parcelamento */
+  .container_produtos_text ul li p:nth-last-of-type(2) {
+    /* Seleciona o penúltimo <p> (parcelamento) */
+    font-size: 11px;
+    color: #555;
+    margin-bottom: 8px;
+  }
+
+  /* Ajusta o botão */
+  .container_produtos_text ul li button {
+    width: 100%;
+    font-size: 12px;
+    padding: 8px 10px;
+    margin-top: auto; /* Empurra o botão para baixo se houver espaço extra */
+    gap: 5px;
+  }
+
+  /* Ajusta setas de navegação do Swiper */
+  .product-swiper .swiper-button-prev,
+  .product-swiper .swiper-button-next {
+    top: 45%; /* Posição vertical das setas */
+    width: 25px;
+    height: 25px;
+    /* background-size: 15px 15px; */ /* Opcional: diminuir tamanho do ícone da seta */
+  }
+  .product-swiper .swiper-button-prev {
+    left: 5px;
+  }
+  .product-swiper .swiper-button-next {
+    right: 5px;
+  }
+
+  /* Ajusta paginação do Swiper */
+  .product-swiper .swiper-pagination {
+    bottom: 5px; /* Posição vertical da paginação */
+  }
+  .product-swiper .swiper-pagination-bullet {
+    width: 6px;
+    height: 6px;
+  }
+}
+
+/* Adicionar outras media queries para tablets/desktops maiores se necessário */
+/* Ex: @media (min-width: 601px) and (max-width: 900px) { ... } */

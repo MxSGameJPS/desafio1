@@ -84,9 +84,7 @@
 
 /* Mobile Styles */
 @media (max-width: 768px) {
-  .container_footer {
-    padding: 30px 15px; /* Reduzir padding */
-  }
+    
 
   .container_footer_image {
     flex-direction: column; /* Empilhar logo/social e texto */

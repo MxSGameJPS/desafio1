@@ -79,16 +79,15 @@
   }
 
   .newsletter_form {
-    flex-direction: column; /* Empilhar o formulário */
-    padding: 30px 15px; /* Reduzir padding */
+    flex-direction: column;
     max-width: 100%;
     gap: 15px; /* Ajustar espaçamento */
   }
 
   .newsletter_form input[type="text"],
   .newsletter_form input[type="email"] {
-    max-width: calc(100% - 20px); /* Ocupar largura, descontar padding */
-    width: calc(100% - 20px);
+    max-width: calc(100% - 90px); /* Ocupar largura, descontar padding */
+    width: calc(100% - 60px);
   }
 
   .newsletter_form div {

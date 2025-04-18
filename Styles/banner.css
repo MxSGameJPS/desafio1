@@ -58,7 +58,6 @@
   .container_banner_2 {
     flex-direction: column; /* Empilhar itens */
     gap: 20px;
-    padding: 0 15px; /* Adicionar padding lateral */
     max-width: 100%;
   }
 

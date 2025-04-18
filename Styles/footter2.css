@@ -19,7 +19,7 @@
 /* Mobile Styles */
 @media (max-width: 768px) {
   .container_footer_copy {
-    padding: 0 15px; /* Ajustar padding */
+    padding: 0;
     margin: 20px auto 40px; /* Aumentar margem inferior */
   }
 

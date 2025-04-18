@@ -57,7 +57,6 @@
   .container_banner_3 {
     flex-direction: column-reverse; /* Empilhar, imagem primeiro */
     gap: 20px;
-    padding: 20px 15px; /* Ajustar padding */
     margin-top: 30px;
     margin-bottom: 30px;
   }

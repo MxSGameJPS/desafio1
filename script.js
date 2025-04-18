@@ -95,7 +95,6 @@ document.addEventListener("DOMContentLoaded", function () {
     try {
       new Swiper(swiperContainer, {
         // Opções do Swiper
-        slidesPerView: 5, // Quantos slides visíveis
         spaceBetween: 17, // Espaçamento entre slides
         loop: true, // Ativar loop infinito
         grabCursor: true, // Mudar cursor para "agarrar"
@@ -118,6 +117,30 @@ document.addEventListener("DOMContentLoaded", function () {
           disableOnInteraction: false, // Não desabilitar após interação manual (pode remover se preferir)
           pauseOnMouseEnter: true, // Pausar ao passar o mouse
         },
+
+        // Breakpoints Responsivos
+        breakpoints: {
+          // Quando a largura da janela for <= 600px
+          600: {
+            slidesPerView: 3,
+            spaceBetween: 50, // Reduzir espaço em telas menores
+          },
+          // Quando a largura da janela for > 600px e <= 900px
+          601: {
+            slidesPerView: 3,
+            spaceBetween: 15,
+          },
+          // Quando a largura da janela for > 900px e <= 1200px
+          901: {
+            slidesPerView: 4,
+            spaceBetween: 17,
+          },
+          // Quando a largura da janela for > 1200px
+          1201: {
+            slidesPerView: 5, // Mantém 5 para telas grandes
+            spaceBetween: 17,
+          },
+        },
       });
       console.log(`Swiper ${index + 1} initialized successfully.`); // DEBUG
     } catch (error) {
@@ -126,168 +149,3 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// --- Funcionalidade do Carrossel (com Clonagem) ---
-if (listaProdutos && setaEsquerda && setaDireita && dotsContainer) {
-  const items = Array.from(listaProdutos.querySelectorAll("li"));
-  const totalOriginalItems = items.length;
-  const itemsVisibles = 5; // Número de itens visíveis
-  const itemWidth = items[0].offsetWidth + 17; // Largura do item + gap
-  let currentIndex = itemsVisibles; // Começa no primeiro item *original* após os clones
-  let isTransitioning = false;
-  let autoPlayInterval = null;
-  const dots = dotsContainer.querySelectorAll(".dot");
-
-  // 1. Clonar itens
-  const itemsToPrepend = items
-    .slice(-itemsVisibles)
-    .map((item) => item.cloneNode(true));
-  const itemsToAppend = items
-    .slice(0, itemsVisibles)
-    .map((item) => item.cloneNode(true));
-
-  // Adicionar clones ao DOM
-  listaProdutos.prepend(...itemsToPrepend);
-  listaProdutos.append(...itemsToAppend);
-
-  // 2. Ajustar posição inicial (sem transição)
-  listaProdutos.style.transition = "none"; // Desabilita transição para ajuste inicial
-  listaProdutos.style.transform = `translateX(${-currentIndex * itemWidth}px)`;
-
-  // Força reflow para garantir que a transição 'none' seja aplicada antes de reativá-la
-  listaProdutos.offsetHeight;
-
-  // Reabilita a transição
-  listaProdutos.style.transition = "transform 0.5s ease-in-out";
-
-  // Função para atualizar os dots ativos (considerando apenas itens originais)
-  function updateDots() {
-    if (dots.length > 0) {
-      const originalIndex =
-        (currentIndex - itemsVisibles + totalOriginalItems) %
-        totalOriginalItems;
-      const activeDotIndex = Math.floor(
-        originalIndex /
-          Math.ceil((totalOriginalItems - itemsVisibles + 1) / dots.length)
-      );
-
-      dots.forEach((dot, index) => {
-        // Garante que o activeDotIndex não exceda o número de dots
-        dot.classList.toggle(
-          "active",
-          index === Math.min(dots.length - 1, activeDotIndex)
-        );
-      });
-    }
-  }
-
-  // Função para mover o carrossel
-  function moveCarousel(direction) {
-    if (isTransitioning) return;
-    isTransitioning = true;
-
-    if (direction === "next") {
-      currentIndex++;
-    } else if (direction === "prev") {
-      currentIndex--;
-    }
-
-    listaProdutos.style.transform = `translateX(${
-      -currentIndex * itemWidth
-    }px)`;
-    updateDots(); // Atualiza os dots imediatamente ao iniciar o movimento
-  }
-
-  // Função para ir para um slide específico (usado pelos dots)
-  function goToSlide(dotIndex) {
-    if (isTransitioning) return;
-    stopAutoPlay();
-
-    const totalGroups =
-      totalOriginalItems > itemsVisibles
-        ? totalOriginalItems - itemsVisibles + 1
-        : 1;
-    const dotsPerGroup = Math.ceil(totalGroups / dots.length);
-    // Calcula o índice do *primeiro item original* correspondente ao dot clicado
-    const targetOriginalIndex = Math.min(
-      totalOriginalItems - itemsVisibles,
-      dotIndex * dotsPerGroup
-    );
-    // Converte para o índice global (incluindo clones prepended)
-    currentIndex = targetOriginalIndex + itemsVisibles;
-
-    isTransitioning = true;
-    listaProdutos.style.transform = `translateX(${
-      -currentIndex * itemWidth
-    }px)`;
-    updateDots();
-    // isTransitioning será resetado no transitionend
-  }
-
-  // Event listener para o fim da transição (para o loop infinito)
-  listaProdutos.addEventListener("transitionend", () => {
-    // Verifica se chegou aos clones do final
-    if (currentIndex >= totalOriginalItems + itemsVisibles) {
-      listaProdutos.style.transition = "none";
-      currentIndex =
-        itemsVisibles +
-        ((currentIndex % (totalOriginalItems + itemsVisibles)) %
-          totalOriginalItems); // Volta para o item original correspondente no início
-      listaProdutos.style.transform = `translateX(${
-        -currentIndex * itemWidth
-      }px)`;
-      listaProdutos.offsetHeight; // Reflow
-      listaProdutos.style.transition = "transform 0.5s ease-in-out";
-    }
-    // Verifica se chegou aos clones do início
-    else if (currentIndex < itemsVisibles) {
-      listaProdutos.style.transition = "none";
-      currentIndex =
-        itemsVisibles + totalOriginalItems - (itemsVisibles - currentIndex);
-      // Volta para o item original correspondente no fim
-      listaProdutos.style.transform = `translateX(${
-        -currentIndex * itemWidth
-      }px)`;
-      listaProdutos.offsetHeight; // Reflow
-      listaProdutos.style.transition = "transform 0.5s ease-in-out";
-    }
-    isTransitioning = false;
-  });
-
-  // Iniciar Autoplay
-  function startAutoPlay() {
-    stopAutoPlay();
-    autoPlayInterval = setInterval(() => moveCarousel("next"), 5000);
-  }
-
-  // Parar Autoplay
-  function stopAutoPlay() {
-    clearInterval(autoPlayInterval);
-  }
-
-  // Adiciona eventos aos botões de navegação
-  setaEsquerda.addEventListener("click", () => {
-    moveCarousel("prev");
-    stopAutoPlay();
-  });
-  setaDireita.addEventListener("click", () => {
-    moveCarousel("next");
-    stopAutoPlay();
-  });
-
-  // Adiciona eventos aos dots
-  dots.forEach((dot, index) => {
-    dot.addEventListener("click", () => {
-      goToSlide(index);
-      // Não precisa parar autoplay aqui, pois goToSlide já para
-    });
-  });
-
-  // Pausa/Reinicia autoplay no hover
-  listaProdutos.addEventListener("mouseenter", stopAutoPlay);
-  listaProdutos.addEventListener("mouseleave", startAutoPlay);
-
-  // Inicializa os dots e o autoplay
-  updateDots();
-  startAutoPlay();
-}
-// --- Fim Carrossel ---
