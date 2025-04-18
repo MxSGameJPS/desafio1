@@ -33,8 +33,6 @@
   max-width: 152px;
 }
 
-
-
 .redes_sociais {
   display: flex;
   align-items: center;
@@ -84,3 +82,39 @@
   color: #000;
 }
 
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .container_footer {
+    padding: 30px 15px; /* Reduzir padding */
+  }
+
+  .container_footer_image {
+    flex-direction: column; /* Empilhar logo/social e texto */
+    align-items: center; /* Centralizar itens empilhados */
+    gap: 30px; /* Espaço entre logo/social e colunas de texto */
+    text-align: center; /* Centralizar texto dentro das colunas */
+  }
+
+  .footer_image {
+    max-width: 100%; /* Permitir que o logo/social use a largura */
+  }
+
+  .footer_text {
+    flex-direction: column; /* Empilhar colunas de texto */
+    align-items: center; /* Centralizar colunas */
+    gap: 20px; /* Espaço entre colunas */
+    width: 100%;
+  }
+
+  .footer_text ul {
+    align-items: center; /* Centralizar itens da lista */
+    width: 100%;
+  }
+
+  .pagamentos img {
+    /* Ajustar imagem de pagamentos */
+    max-width: 90%;
+    height: auto;
+    margin-top: 30px;
+  }
+}

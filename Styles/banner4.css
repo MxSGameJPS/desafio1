@@ -31,4 +31,20 @@
   margin: 0;
 }
 
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .container_banner_4_text {
+    position: static; /* Remover posicionamento absoluto */
+    transform: none;
+    border-radius: 0; /* Remover bordas arredondadas */
+    padding: 15px; /* Reduzir padding */
+    font-size: 18px; /* Reduzir fonte */
+    width: auto; /* Largura automática */
+  }
 
+  .container_banner_4 img {
+    max-height: 250px; /* Limitar altura da imagem de fundo */
+    object-fit: cover;
+    display: block;
+  }
+}

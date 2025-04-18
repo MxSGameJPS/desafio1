@@ -38,55 +38,7 @@
   max-width: 1220px;
 }
 
-/* Remover ou comentar estilos antigos das setas e indicadores */
-/*
-.seta_esquerda {
-  position: absolute;
-  top: 50%;
-  left: 16%;
-  border: 1px solid #005cff;
-  border-radius: 999px;
-  color: #005cff;
-  padding: 20px;
-  gap: 10px;
-  cursor: pointer;
-  background-color: #fff;
-}
 
-.seta_direita {
-  position: absolute;
-  top: 50%;
-  right:16%;
-  border: 1px solid #005cff;
-  border-radius: 999px;
-  color: #005cff;
-  padding: 20px;
-  gap: 10px;
-  cursor: pointer;
-  background-color: #fff;
-}
-
-.indicadores {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-  width: 100%;
-}
-
-.dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background-color: #dddddd;
-  margin: 0 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.dot.active {
-  background-color: #005cff;
-}
-*/
 
 /* Remover estilos conflitantes do UL antigo */
 .container_produtos_text ul.swiper-wrapper {

@@ -38,6 +38,11 @@
     <!-- Header -->
     <header>
       <div class="container_imagem">
+        <!-- Botão Hamburger (visível apenas em mobile) -->
+        <button class="hamburger-button" aria-label="Abrir menu">
+          <i class="fas fa-bars"></i>
+        </button>
+
         <img src="Images/logo.svg" alt="Logo Avanti" />
 
         <div class="search-container">
@@ -50,6 +55,9 @@
         </div>
 
         <div class="user-actions">
+          <!-- Ícone de busca (opcional para mobile, pode substituir a barra) -->
+          <i class="fas fa-search mobile-search-icon"></i>
+
           <div class="user-profile">
             <i class="fas fa-user"></i>
             <span>Olá, cliente</span>
@@ -62,6 +70,30 @@
         </div>
       </div>
     </header>
+
+    <!-- Menu Mobile (inicialmente oculto) -->
+    <nav class="mobile-menu">
+      <button class="close-menu-button" aria-label="Fechar menu">
+        &times;
+      </button>
+      <!-- Conteúdo do menu pode ser duplicado do desktop ou simplificado -->
+      <ul>
+        <li><a href="#">Todas as Categorias</a></li>
+        <li><a href="#">Departamentos</a></li>
+        <li><a href="#">Departamentos</a></li>
+        <li><a href="#">Departamentos</a></li>
+        <li><a href="#">Departamentos</a></li>
+        <li><a href="#">Departamentos</a></li>
+        <li><a href="#">Departamentos</a></li>
+        <li><a href="#">Departamentos</a></li>
+        <li><a href="#">Departamentos</a></li>
+        <li><a href="#">Departamentos</a></li>
+        <!-- Adicionar mais links conforme necessário -->
+      </ul>
+    </nav>
+
+    <!-- Overlay para escurecer a página quando o menu mobile estiver aberto -->
+    <div class="overlay"></div>
 
     <!-- Menu de navegação -->
     <nav class="main-menu">
@@ -607,7 +639,6 @@
         </div>
       </div>
     </div>
-
 
     <div class="container_banner_4">
       <img src="Images/Bannercomfaixaazul.png" alt="Banner 4" />

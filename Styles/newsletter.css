@@ -27,7 +27,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  background-color: #DEDEDE;
+  background-color: #dedede;
   padding: 80px 0;
   border-radius: 8px;
   width: 100%;
@@ -68,4 +68,48 @@
 
 .newsletter_form label a {
   color: #005cff;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .newsletter_text h2 {
+    font-size: 22px; /* Reduzir fonte título */
+    text-align: center; /* Centralizar título */
+    padding: 0 15px; /* Adicionar padding */
+  }
+
+  .newsletter_form {
+    flex-direction: column; /* Empilhar o formulário */
+    padding: 30px 15px; /* Reduzir padding */
+    max-width: 100%;
+    gap: 15px; /* Ajustar espaçamento */
+  }
+
+  .newsletter_form input[type="text"],
+  .newsletter_form input[type="email"] {
+    max-width: calc(100% - 20px); /* Ocupar largura, descontar padding */
+    width: calc(100% - 20px);
+  }
+
+  .newsletter_form div {
+    /* Container para checkbox e label se houver */
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .newsletter_form .checkbox {
+    /* Estilos checkbox se necessário */
+  }
+
+  .newsletter_form label {
+    text-align: center;
+  }
+
+  .newsletter_form .botao_newsletter {
+    max-width: 200px; /* Ajustar largura botão */
+    width: 100%;
+  }
 }

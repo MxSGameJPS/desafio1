@@ -15,3 +15,22 @@
   font-size: 14px;
   color: #000;
 }
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .container_footer_copy {
+    padding: 0 15px; /* Ajustar padding */
+    margin: 20px auto 40px; /* Aumentar margem inferior */
+  }
+
+  .container_footer_copy p {
+    font-size: 12px; /* Reduzir fonte */
+  }
+
+  .container_footer_copy .cartoes img {
+    /* Imagem de cartões */
+    max-width: 90%; /* Ajustar largura */
+    height: auto;
+    margin-top: 15px;
+  }
+}

@@ -3,7 +3,7 @@
   height: 400px;
   overflow: hidden;
   border: 1px solid #e0e0e0;
-  background-color: #E7E7EA;
+  background-color: #e7e7ea;
 }
 
 .container_banner img {
@@ -18,14 +18,17 @@
 .container_banner_text {
   position: absolute;
   top: 50%;
-  right: 10%;
+  left: 10%;
   transform: translateY(-50%);
   text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
 }
 
 .container_banner_text h2 {
   font-size: 80px;
-  margin: 0;
+  margin: 0 auto;
   letter-spacing: 1px;
   text-transform: uppercase;
   font-family: Arial, sans-serif;
@@ -42,7 +45,7 @@
 }
 
 .container_banner_text p {
-  color: #005CFF;
+  color: #005cff;
   font-size: 20px;
   margin: 8px 0;
   text-transform: uppercase;
@@ -51,10 +54,74 @@
 }
 
 .container_banner_text h3 {
-  color: #005CFF;
+  color: #005cff;
   font-size: 52px;
   font-weight: 700;
   margin: 0;
   font-family: Arial, sans-serif;
   text-transform: uppercase;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .container_banner {
+    height: auto; /* Altura baseada na imagem */
+    position: relative; /* Para posicionar texto absoluto */
+  }
+
+  .container_banner img {
+    position: static; /* Remover pos absoluto do desktop */
+    width: 60%;
+    height: auto;
+    display: block;
+  }
+
+  .container_banner_text {
+    position: absolute; /* Texto sobrepõe a imagem */
+    top: 50%; /* Centralizar verticalmente */
+    left: 50%; /* Centralizar horizontalmente */
+    transform: translate(-10%, -50%);/* Ajuste fino da centralização */
+    
+    padding: 15px 20px;
+    text-align: center;
+    width: 50%; /* Largura do bloco de texto */
+    border-radius: 5px; /* Bordas arredondadas leves */
+    box-sizing: border-box;
+  }
+
+  .container_banner_text h2,
+  .container_banner_text p,
+  .container_banner_text h3 {
+    /* Usar as cores do desktop (preto e azul) */
+    font-size: smaller; /* Ajustar tamanho geral */
+    position: relative; /* Para garantir que apareçam sobre o fundo */
+    z-index: 1;
+  }
+
+  /* Remover pseudo-elementos no mobile se ainda existirem (melhor ter HTML separado) */
+  .container_banner_text h2::before,
+  .container_banner_text h2::after {
+    display: none;
+  }
+
+  /* Ajustes específicos de tamanho mobile */
+  .container_banner_text h2 {
+    font-size: 2.8em; /* Ex: SUPER SALE */
+    color: #000;
+    line-height: 1.1;
+  }
+
+  .container_banner_text p {
+    font-size: 0.9em; /* Ex: SELECTED ITEMS */
+    letter-spacing: 1px;
+    color: #005cff;
+    font-weight: 600;
+    margin: 5px 0;
+  }
+
+  .container_banner_text h3 {
+    font-size: 2.5em; /* Ex: 50% OFF */
+    color: #005cff;
+    font-weight: 700;
+  }
 }
