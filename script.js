@@ -26,8 +26,48 @@ if (searchButton && searchInput) {
   });
 }
 
-// --- Funcionalidade do Carrossel (com Swiper) ---
+// --- Funcionalidade do Menu Hover ---
 document.addEventListener("DOMContentLoaded", function () {
+  const menuItems = document.querySelectorAll(".main-menu .menu-item");
+  const submenuContainer = document.getElementById("submenu-container");
+  let hideTimeout; // Timer para o fechamento
+
+  if (!submenuContainer) {
+    console.error("Submenu container not found!");
+    return;
+  }
+
+  // Função para mostrar o submenu
+  function showSubmenu() {
+    clearTimeout(hideTimeout); // Cancela qualquer timer de fechamento pendente
+    submenuContainer.classList.add("active");
+    // Opcional: adicionar classe 'active' ao item do menu hovered (se necessário para estilização)
+    // menuItems.forEach(item => item.classList.remove('active'));
+    // this.classList.add('active'); // 'this' pode não ser o item correto aqui, cuidado
+  }
+
+  // Função para iniciar o timer de fechamento do submenu
+  function startHideTimer() {
+    clearTimeout(hideTimeout); // Limpa timer anterior
+    hideTimeout = setTimeout(() => {
+      submenuContainer.classList.remove("active");
+      // Opcional: remover classe 'active' dos itens do menu
+      // menuItems.forEach(item => item.classList.remove('active'));
+    }, 200); // Pequeno delay para permitir mover o mouse para o submenu
+  }
+
+  // Adiciona listeners aos itens do menu principal
+  menuItems.forEach((item) => {
+    item.addEventListener("mouseenter", showSubmenu);
+    item.addEventListener("mouseleave", startHideTimer);
+  });
+
+  // Mantém o submenu aberto se o mouse entrar nele
+  submenuContainer.addEventListener("mouseenter", showSubmenu); // Reusa showSubmenu para cancelar o timer
+  // Inicia o timer de fechamento se o mouse sair do submenu
+  submenuContainer.addEventListener("mouseleave", startHideTimer);
+
+  // --- Funcionalidade do Carrossel (com Swiper) ---
   const productSwipers = document.querySelectorAll(".product-swiper");
   console.log(`Found ${productSwipers.length} swiper containers.`); // DEBUG
 
